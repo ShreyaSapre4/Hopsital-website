@@ -1,0 +1,90 @@
+@import "../colours";
+.appointmentForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: $white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    font-size: 1.2rem;
+
+    .form-grid {
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      div {
+        margin-right: 1rem;
+      }
+    }
+
+    h1{
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: $green;
+    }
+
+    input {
+      width: 95%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: border-color 0.3s ease;
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+
+      &:focus {
+        border-color: $green;
+        outline: none;
+      }
+    }
+
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    select {
+      width: 97%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: border-color 0.3s ease;
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+
+      &:focus {
+        border-color: $green;
+        outline: none;
+      }
+    }
+
+    p {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      align-self: center;
+    }
+
+    button {
+      padding: 0.55rem;
+      background-color: $green;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+
+      &:hover {
+        background-color: $green-hover;
+      }
+    }
+  }
+}

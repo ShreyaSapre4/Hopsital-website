@@ -1,0 +1,68 @@
+@import '../colours';
+
+.page-doctors {
+  margin-left: 200px;
+  padding: 20px;
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: $Primary;
+
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 270px;
+      height: 270px;
+      margin-bottom: 10px;
+      clip-path: circle();
+    }
+
+    h4 {
+      margin: 10px 0;
+      font-size: 1.5rem;
+      color: $text;
+    }
+
+    .details {
+      p {
+        margin: 5px 0;
+        font-size: 1rem;
+        text-align: left;
+        color: #666;
+
+        span {
+          font-weight: bold;
+          color: #333;
+        }
+      }
+    }
+  }
+}

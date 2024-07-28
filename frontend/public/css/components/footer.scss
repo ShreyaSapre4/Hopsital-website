@@ -1,0 +1,38 @@
+@import "../colours";
+
+.footer {
+  background-color: $green;
+  padding: 2rem 0;
+  text-align: center;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .social-media {
+      display: flex;
+      align-items: center;
+
+      a {
+        display: inline-block;
+        margin: 0 1rem;
+        color: $white;
+        font-size: 2rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $green-hover;
+        }
+      }
+    }
+
+    .contact-info {
+      p {
+        color: $white;
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

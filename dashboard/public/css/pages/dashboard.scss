@@ -1,0 +1,150 @@
+@import "../colours";
+.dashboard-page {
+  margin-left: 190px;
+  padding: 1rem;
+
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+
+    .firstBox,
+    .secondBox,
+    .thirdBox {
+      flex: 1;
+      padding: 20px;
+      border-radius: 8px;
+      background: linear-gradient(45deg, $Primary, $Secondary);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      color: $text;
+      justify-content: center;
+
+      &.firstBox {
+        .content {
+          p {
+            font-size: 1em;
+            margin-bottom: 5px;
+          }
+
+          h5 {
+            font-size: 2rem;
+            margin: 0;
+          }
+        }
+      }
+
+      &.secondBox,
+      &.thirdBox {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          font-size: 3rem;
+          margin: 0;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .appointments {
+    h5 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1em;
+      min-width: 400px;
+      border: 1px solid $Dark-Gray;
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+      }
+
+      th {
+        background-color: $Primary;
+        color: $White;
+        text-transform: uppercase;
+      }
+
+      tr {
+        border-bottom: 1px solid $Dark-Gray;
+
+        
+        &:nth-of-type(odd) {
+          background-color: $light-gray
+        }
+
+        &:last-of-type {
+          border-bottom: 2px solid $Dark-Gray;
+        }
+      }
+
+      td {
+        .value-pending {
+          color: rgb(161, 161, 0);
+        }
+
+        .value-accepted {
+          color: rgb(42, 254, 42);
+        }
+
+        .value-rejected {
+          color: rgb(252, 30, 30);
+        }
+
+        select {
+          padding: 5px;
+          border: 1px solid $Dark-Gray;
+          border-radius: 4px;
+
+          &.value-pending {
+            background-color: rgba(252, 252, 31, 0.1);
+          }
+
+          &.value-accepted {
+            background-color: rgba(153, 252, 153, 0.1);
+          }
+
+          &.value-rejected {
+            background-color: rgba(247, 153, 153, 0.1);
+          }
+        }
+
+        .green {
+          color: green;
+        }
+
+        .red {
+          color:red;
+        }
+
+        .red .delete-icon {
+          color: orangered;
+          cursor: pointer;
+
+          &:hover {
+            color: darken(orangered, 10%);
+          }
+        }
+      }
+    }
+  }
+}

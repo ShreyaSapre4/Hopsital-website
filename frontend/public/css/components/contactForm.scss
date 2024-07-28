@@ -1,0 +1,57 @@
+@import "../colours";
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+
+  form {
+    background-color: $white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 30%;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: $green;
+    }
+
+    div {
+      margin-bottom: 1rem;
+
+      input,
+      textarea {
+        width: 90%;
+        font-size: 1rem;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: $green;
+          outline: none;
+        }
+      }
+
+      button {
+        width: 95%;
+        padding: 0.75rem;
+        background-color: $green;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $green-hover;
+        }
+      }
+    }
+  }
+}

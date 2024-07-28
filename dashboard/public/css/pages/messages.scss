@@ -1,0 +1,54 @@
+@import "../colours";
+
+.page-messages {
+  padding: 20px;
+  margin-left: 200px;
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: $text;
+  }
+
+  .messages {
+    background-color: $White;
+    padding: 20px;
+    border-radius: 8px;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+
+      thead {
+        background-color: $Primary;
+        color: $White;
+
+        th {
+          padding: 10px;
+          text-align: left;
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: $light-gray;
+          }
+
+          td {
+            padding: 10px;
+            border: 1px solid $Dark-Gray;
+            color: $text;
+          }
+        }
+      }
+    }
+
+    h1 {
+      font-size: 1.5em;
+      text-align: center;
+      color: $Secondary;
+    }
+  }
+}

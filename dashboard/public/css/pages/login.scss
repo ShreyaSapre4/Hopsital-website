@@ -1,0 +1,51 @@
+@import '../colours' ;
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  form {
+    background-color: $light-gray;
+    padding: 4rem 5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid $text;
+
+    h1 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: $Primary;
+      text-transform: uppercase;
+    }
+
+    div {
+      margin-bottom: 1.2rem;
+
+      input {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid $Dark-Gray;
+        border-radius: 4px;
+        font-size: 1em;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: $Primary;
+        color: $White;
+        border: none;
+        border-radius: 4px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($Primary, 20%);
+        }
+      }
+    }
+  }
+}
